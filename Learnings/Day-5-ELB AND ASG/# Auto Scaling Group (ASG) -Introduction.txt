@@ -1,0 +1,14 @@
+# Auto Scaling Group (ASG) Overview
+
+Auto Scaling Groups automatically adjust the number of EC2 instances to handle traffic or workload changes. It ensures your application is always running with the right capacity.
+
+Key features:
+- Maintains a minimum, maximum, and desired number of instances.
+- Automatically launches or terminates instances based on policies.
+- Works seamlessly with ELB to distribute traffic to healthy instances.
+- Enables cost optimization by scaling down during low traffic.
+
+Use cases:
+- Web applications with variable traffic.
+- Fault-tolerant backend services.
+- Scaling applications automatically without manual intervention.

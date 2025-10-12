@@ -1,0 +1,28 @@
+# Elastic Load Balancer - Step-by-Step Setup
+
+1. Launch two or more EC2 instances:
+   - OS: Amazon Linux or Ubuntu.
+   - Install web server (Apache/Nginx):
+     Example:
+     sudo yum install httpd -y
+     sudo systemctl start httpd
+     echo "Hello from Server 1" > /var/www/html/index.html
+     (Change message for Server 2: "Hello from Server 2")
+
+2. Create a Target Group:
+   - Go to EC2 > Target Groups > Create Target Group.
+   - Target type: Instances.
+   - Protocol: HTTP, Port: 80.
+   - Add the EC2 instances as targets.
+
+3. Create an Application Load Balancer (ALB):
+   - Go to EC2 > Load Balancers > Create Load Balancer > ALB.
+   - Scheme: Internet-facing.
+   - Listeners: HTTP 80.
+   - Attach the target group created above.
+   - Choose subnets (preferably multiple AZs for high availability).
+
+4. Test:
+   - Copy the DNS name of the ALB.
+   - Open it in browser multiple times.
+   - Requests should alternate between Server 1 and Server 2.

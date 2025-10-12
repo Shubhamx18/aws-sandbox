@@ -1,0 +1,21 @@
+# Real-World Implementation Example
+
+Scenario: Deploy a highly available web application with 2 EC2 instances and an Auto Scaling Group.
+
+Steps:
+1. Launch 2 EC2 instances with a simple HTML page (Server 1 & Server 2).
+2. Create a Target Group and attach both instances.
+3. Create an Application Load Balancer (ALB) and attach the target group.
+4. Create a Launch Template using the EC2 AMI.
+5. Create an Auto Scaling Group with min=2, max=4, desired=2.
+6. Attach ASG to ALB.
+7. Configure scaling policy: CPU > 70% → add instance, CPU < 30% → remove instance.
+8. Test:
+   - Access ALB DNS → traffic alternates between Server 1 & 2.
+   - Stop one instance → ASG launches a replacement automatically.
+   - Generate high CPU load → ASG scales out new instances.
+
+Outcome:
+- ELB distributes traffic automatically.
+- ASG maintains desired capacity.
+- Application remains highly available and fault-tolerant.

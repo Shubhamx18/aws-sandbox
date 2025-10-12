@@ -1,0 +1,14 @@
+# Elastic Load Balancing (ELB) Overview
+
+Elastic Load Balancing automatically distributes incoming traffic across multiple targets (EC2 instances, containers, or IP addresses) to ensure high availability, fault tolerance, and scalability.
+
+Types of ELB:
+1. Application Load Balancer (ALB) - Layer 7 (HTTP/HTTPS). Best for web apps.
+2. Network Load Balancer (NLB) - Layer 4 (TCP/UDP). High performance, low latency.
+3. Gateway Load Balancer (GLB) - For third-party appliances (firewalls, IDS).
+
+Key features:
+- Distributes traffic evenly across targets.
+- Performs health checks on targets and only sends traffic to healthy instances.
+- Integrates with Auto Scaling to handle dynamic traffic changes.
+- Can terminate SSL/TLS (HTTPS) connections.

@@ -1,0 +1,22 @@
+# Auto Scaling Group - Step-by-Step Setup
+
+1. Launch Configuration / Launch Template:
+   - Create a template with AMI, instance type, security group, and key pair.
+   - Example: Amazon Linux 2, t2.micro, HTTP allowed.
+
+2. Create Auto Scaling Group:
+   - Go to EC2 > Auto Scaling Groups > Create ASG.
+   - Choose the launch template/configuration.
+   - Set minimum, desired, and maximum instances.
+   - Attach the group to existing ELB for traffic distribution.
+   - Choose subnets (preferably multiple AZs for HA).
+
+3. Configure Scaling Policies:
+   - Example: Scale out when average CPU > 70%.
+   - Scale in when average CPU < 30%.
+   - Set cooldown period (e.g., 300 seconds) to avoid rapid scaling.
+
+4. Test:
+   - Stop one instance manually and observe ELB traffic.
+   - Increase load artificially to trigger scale-out policy.
+   - Observe ASG launching new instances automatically.
