@@ -1,0 +1,75 @@
+Day-4: AWS EBS Snapshot Guide and Deployment
+============================================
+
+This guide explains how to create EBS snapshots and deploy them in the same or different Availability Zone (AZ) or Region.
+
+--------------------------------------------------
+Step 1: Create an EBS Snapshot
+--------------------------------------------------
+1. Open AWS Management Console → EC2 → Volumes.
+2. Select the EBS volume you want to back up.
+3. Click "Actions" → "Create Snapshot".
+4. Enter a **Name** and **Description** (optional).
+5. Click "Create Snapshot".
+
+# Using AWS CLI:
+aws ec2 create-snapshot --volume-id vol-xxxx --description "My EBS backup"
+
+- Snapshots are **incremental**, saving only changes since the last snapshot.
+- Stored in Amazon S3 (managed by AWS).
+
+--------------------------------------------------
+Step 2: Deploy Snapshot in the Same AZ/Region
+--------------------------------------------------
+1. Open AWS Management Console → EC2 → Snapshots.
+2. Select your snapshot → "Actions" → "Create Volume".
+3. Configure:
+   - Availability Zone (AZ) → same as original EC2 instance.
+   - Volume Type → gp3 (or original type).
+   - Size → can increase if needed.
+4. Click "Create Volume".
+5. Attach this new volume to your EC2 instance:
+   - Select the volume → "Attach Volume".
+   - Choose the instance → Device name (e.g., /dev/xvdf) → Attach.
+6. Connect to EC2, format (if needed), mount, and verify:
+```bash
+sudo mkfs -t xfs /dev/nvme1n1   # only if formatting required
+sudo mkdir /data
+sudo mount /dev/nvme1n1 /data
+df -h
+
+-------------------------------------------------------
+Step 4: Copy Snapshot to Another Region
+-------------------------------------------------------
+- Snapshots are region-specific, so you must copy them to use in another region.
+- Open AWS Console → EC2 → Snapshots.
+- Select the snapshot → "Actions" → "Copy Snapshot".
+- Choose the Destination Region.
+- Enter Name/Description → Click "Copy Snapshot".
+
+# Using AWS CLI:
+aws ec2 copy-snapshot --source-region us-east-1 --source-snapshot-id snap-xxxx --destination-region us-west-2 --description "Copy of EBS snapshot"
+
+- Go to the Destination Region → Snapshots → select the copied snapshot.
+- Click "Actions" → "Create Volume".
+- Choose AZ in the new region, configure size/type → Create Volume.
+- Launch or attach to EC2 in that region.
+- Connect, mount, and verify as in Step 2.
+
+-------------------------------------------------------
+Step 5: Test Volume
+-------------------------------------------------------
+# Write test file
+echo "EBS Snapshot deployed successfully 🚀" | sudo tee /data/snapshot-test.txt
+
+# Verify
+cat /data/snapshot-test.txt
+
+-------------------------------------------------------
+Notes:
+-------------------------------------------------------
+- Snapshots can be used to backup, clone, or migrate volumes.
+- Always check AZ compatibility when attaching volumes.
+- Copy snapshots to different regions for disaster recovery or migration.
+- Snapshots are incremental to save storage space and cost.
+

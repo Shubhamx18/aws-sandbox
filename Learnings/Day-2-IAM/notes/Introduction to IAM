@@ -1,0 +1,16 @@
+# AWS IAM - Introduction
+
+## What is IAM?
+AWS Identity and Access Management (IAM) is a **free service** that allows you to securely control access to AWS services and resources. 
+
+- IAM is a **global service**; changes apply across all regions.
+- It enables you to **create users, groups, roles, and assign permissions**.
+- Provides **fine-grained access control**.
+
+## Key Features
+- **Users:** Individual identities for accessing AWS.
+- **Groups:** Collection of users for easier permission management.
+- **Roles:** Temporary permissions for users or AWS services.
+- **Policies:** JSON rules that define allowed or denied actions.
+- **MFA:** Multi-Factor Authentication for extra security.
+- **Free Service:** No additional cost for IAM itself.

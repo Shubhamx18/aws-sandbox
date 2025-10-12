@@ -1,0 +1,101 @@
+Day-4: AWS EBS (Elastic Block Store) - Description
+==================================================
+
+1. Introduction
+---------------
+Amazon EBS (Elastic Block Store) is a type of storage service provided by AWS.  
+Think of it like a hard disk drive (HDD) or solid-state drive (SSD) that you can attach to Amazon EC2 instances.  
+The special thing about EBS is that your data is not lost even if you stop or restart your EC2 instance.
+
+- EBS volumes are created in a specific Availability Zone (AZ).
+- They must be attached to an EC2 instance in the same AZ.
+- They can be detached from one EC2 and attached to another when needed.
+
+--------------------------------------------------
+
+2. Why Use EBS?
+---------------
+- Store data that must persist after EC2 instance is stopped.
+- Run applications like databases, web servers, analytics workloads.
+- Take backups using snapshots.
+- Scale storage independently of compute.
+
+--------------------------------------------------
+
+3. Key Features
+---------------
+- Persistent Storage: Data saved even after stop/restart.
+- Highly Available: Data replicated in the AZ.
+- Scalable: From 1 GB to 16 TB per volume.
+- Snapshots: Backup at any time.
+- Attach/Detach: Attach/detach volumes to EC2 instances.
+
+--------------------------------------------------
+
+4. Volume Types
+---------------
+1. gp3 (General Purpose SSD)
+   - Default type, balance of cost & performance.
+   - Best for websites, dev/test, general apps.
+
+2. io1/io2 (Provisioned IOPS SSD)
+   - High performance, high IOPS.
+   - Best for databases & critical apps.
+
+3. st1 (Throughput Optimized HDD)
+   - Low-cost HDD with good throughput.
+   - Best for big data, data warehousing, log processing.
+
+4. sc1 (Cold HDD)
+   - Cheapest option.
+   - Best for rarely accessed data (archives, backups).
+
+--------------------------------------------------
+
+5. Snapshots
+------------
+- Snapshot = backup of EBS volume at a point in time.
+- Stored in Amazon S3 (managed by AWS).
+- Uses:
+   * Restore volume after data loss.
+   * Create new volumes.
+   * Create AMI (Amazon Machine Image).
+- Incremental: Only changes since last snapshot are saved.
+
+--------------------------------------------------
+
+6. Common Use Cases
+-------------------
+- Root volume for EC2 (OS + files).
+- Storage for applications.
+- Databases (MySQL, PostgreSQL, MongoDB, etc).
+- Backup & recovery.
+- Big data & analytics.
+
+--------------------------------------------------
+
+7. Pricing
+----------
+You pay for:
+- Volume size (GB/month).
+- Snapshot storage (GB/month).
+- Provisioned IOPS (if using io1/io2).
+
+--------------------------------------------------
+
+8. Important AWS CLI Commands
+-----------------------------
+# Create volume
+aws ec2 create-volume --availability-zone us-east-1a --size 10 --volume-type gp3
+
+# Attach volume
+aws ec2 attach-volume --volume-id vol-xxxx --instance-id i-xxxx --device /dev/xvdf
+
+# Detach volume
+aws ec2 detach-volume --volume-id vol-xxxx
+
+# Delete volume
+aws ec2 delete-volume --volume-id vol-xxxx
+
+# Create snapshot
+aws ec2 create-snapshot --volume-id vol-xxxx --description "Backup snapshot"

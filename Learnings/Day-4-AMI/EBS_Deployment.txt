@@ -1,0 +1,86 @@
+Day-4: AWS EBS Deployment Guide
+===============================
+
+This guide explains step-by-step how to create, attach, format, mount, and use an EBS volume on an EC2 instance.
+
+--------------------------------------------------
+Step 1: Create a New EBS Volume
+--------------------------------------------------
+1. Open the AWS Management Console.
+2. Go to EC2 → Volumes → Create Volume.
+3. Set the following:
+   - Size: e.g., 10 GB
+   - Availability Zone (AZ): Must match your EC2 instance
+   - Volume Type: gp3 (recommended)
+4. Click "Create Volume".
+
+--------------------------------------------------
+Step 2: Attach Volume to EC2
+--------------------------------------------------
+1. Select the volume you just created.
+2. Click "Attach Volume".
+3. Select your EC2 instance.
+4. Set Device Name, e.g., /dev/xvdf.
+5. Click "Attach".
+
+--------------------------------------------------
+Step 3: Connect to EC2 and Verify Volume
+--------------------------------------------------
+# Connect to EC2
+ssh -i mykey.pem ec2-user@<public-ip>
+
+# Check attached volumes
+lsblk
+
+Expected output:
+nvme0n1      8:0   0   8G   0 disk
+└─nvme0n1p1  8:1   0   8G   0 part  /
+nvme1n1      8:16  0  10G   0 disk   <-- new EBS volume
+
+--------------------------------------------------
+Step 4: Format and Mount the Volume
+--------------------------------------------------
+# Format the volume with XFS filesystem
+sudo mkfs -t xfs /dev/nvme1n1
+
+# Create a directory to mount the volume
+sudo mkdir /data
+
+# Mount the volume
+sudo mount /dev/nvme1n1 /data
+
+# Verify mount
+df -h
+
+--------------------------------------------------
+Step 5: Make Mount Permanent
+--------------------------------------------------
+# Get UUID of the volume
+sudo blkid /dev/nvme1n1
+
+# Open fstab to add the volume
+sudo nano /etc/fstab
+
+# Add line at the end:
+UUID=<copied-uuid>   /data   xfs   defaults,nofail   0   2
+
+# Save and exit. The volume will now mount automatically after reboot.
+
+--------------------------------------------------
+Step 6: Test the Volume
+--------------------------------------------------
+# Write a test file
+echo "Hello Shubham! This is stored in EBS 🚀" | sudo tee /data/test.txt
+
+# Verify
+cat /data/test.txt
+
+--------------------------------------------------
+Step 7: Detach/Reattach Volume (Optional)
+--------------------------------------------------
+# Unmount the volume
+sudo umount /data
+
+# Detach from AWS Console → EC2 → Volumes → Detach
+
+# Reattach to another instance if needed and repeat mount steps.
