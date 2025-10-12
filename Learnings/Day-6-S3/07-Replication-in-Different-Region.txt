@@ -1,0 +1,14 @@
+Cross-Region Replication (CRR) replicates objects to a bucket in a different AWS region.
+
+Use Cases:
+- Disaster recovery.
+- Global content distribution.
+
+Steps:
+1. Enable versioning on source and destination buckets.
+2. Create replication rule in source bucket -> choose destination in another region.
+3. Ensure IAM role has replication permissions.
+4. Test by uploading objects.
+
+AWS CLI Example:
+aws s3api put-bucket-replication --bucket source-bucket --replication-configuration file://crr.json

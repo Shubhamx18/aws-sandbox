@@ -1,0 +1,26 @@
+S3 Lifecycle rules automate object management.
+
+Use Cases:
+- Move objects to cheaper storage classes (Glacier) after N days.
+- Automatically delete old objects.
+
+Steps:
+1. Go to bucket -> Management -> Lifecycle rules -> Add rule.
+2. Specify rule name and scope.
+3. Configure transitions (storage class) and expiration (delete objects).
+4. Save rule.
+
+Example JSON:
+{
+  "Rules": [
+    {
+      "ID": "MoveToGlacier",
+      "Prefix": "",
+      "Status": "Enabled",
+      "Transitions": [
+        { "Days": 30, "StorageClass": "GLACIER" }
+      ],
+      "Expiration": { "Days": 365 }
+    }
+  ]
+}

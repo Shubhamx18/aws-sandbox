@@ -1,0 +1,16 @@
+AWS Storage Gateway connects on-premises environments to AWS S3.
+
+Types:
+1. File Gateway - stores files as objects in S3.
+2. Volume Gateway - block storage, snapshots to S3.
+3. Tape Gateway - virtual tape library for backups.
+
+Benefits:
+- Hybrid cloud storage.
+- Backup, archive, and disaster recovery.
+
+Steps to deploy:
+1. Set up gateway VM on-premises.
+2. Activate gateway via AWS Console.
+3. Configure storage and S3 bucket.
+4. Use it as normal storage with local caching.

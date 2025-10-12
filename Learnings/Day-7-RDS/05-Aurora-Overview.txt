@@ -1,0 +1,12 @@
+Amazon Aurora Overview:
+
+- MySQL/PostgreSQL compatible relational database.
+- Performance: 5x faster than standard MySQL, 3x faster than PostgreSQL.
+- High availability with Multi-AZ.
+- Auto-backups and snapshots.
+- Read replicas for scaling read operations.
+
+Use Cases:
+- High-traffic web apps.
+- Enterprise applications.
+- SaaS platforms.

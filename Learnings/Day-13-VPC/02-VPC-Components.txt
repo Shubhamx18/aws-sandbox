@@ -1,0 +1,11 @@
+# VPC Components
+
+1. **VPC**: Logical network boundary.
+2. **Subnets**: Divisions of VPC CIDR block into smaller segments.
+   - Public subnet: Can access the internet.
+   - Private subnet: Cannot access internet directly.
+3. **Route Tables**: Define traffic routing within VPC and to/from the internet.
+4. **Internet Gateway (IGW)**: Allows communication between VPC and internet.
+5. **NAT Gateway/Instance**: Allows private instances to access internet.
+6. **Elastic IP**: Static IP for public-facing resources.
+7. **Endpoints**: Private connection to AWS services without leaving VPC.

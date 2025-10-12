@@ -1,0 +1,12 @@
+# How CloudFront Works
+
+1. User requests content from your website.
+2. Request is routed to the nearest CloudFront edge location.
+3. CloudFront checks if the content is cached at the edge:
+   - If cached, content is delivered immediately.
+   - If not, CloudFront fetches content from the origin (S3, EC2, or other).
+4. Content is cached at the edge for future requests (TTL determines cache duration).
+5. Subsequent requests are served directly from the edge location.
+6. Supports dynamic content, API acceleration, and video streaming.
+7. Integrates with Lambda@Edge for executing custom logic at edge locations.
+8. Uses AWS Shield and WAF for enhanced security.

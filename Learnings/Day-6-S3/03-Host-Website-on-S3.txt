@@ -1,0 +1,27 @@
+S3 can host static websites (HTML, CSS, JS).
+
+Steps:
+1. Create a bucket (name should match your domain for root hosting).
+2. Upload website files (index.html, error.html).
+3. Enable Static Website Hosting in bucket properties.
+4. Specify Index Document and Error Document.
+5. Set permissions for public read (bucket policy or object ACLs).
+6. Access website via S3 endpoint.
+
+AWS CLI Example:
+- Upload files: aws s3 cp website/ s3://my-bucket-name/ --recursive
+- Make public: aws s3api put-bucket-policy --bucket my-bucket-name --policy file://policy.json
+
+Sample Bucket Policy for Public Read:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::my-bucket-name/*"
+    }
+  ]
+}

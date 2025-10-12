@@ -1,0 +1,15 @@
+S3 Same-Region Replication (SRR) replicates objects between buckets in the same AWS region.
+
+Use Cases:
+- Backup within the same region.
+- Compliance requirements.
+
+Steps:
+1. Enable versioning on both source and destination buckets.
+2. Go to source bucket -> Management -> Replication -> Add rule.
+3. Specify destination bucket in the same region.
+4. Create an IAM role for replication.
+5. Save and test by uploading objects.
+
+AWS CLI:
+aws s3api put-bucket-replication --bucket source-bucket --replication-configuration file://replication.json

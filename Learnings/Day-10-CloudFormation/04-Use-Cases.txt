@@ -1,0 +1,23 @@
+# Use Cases of AWS CloudFormation
+
+1. **Infrastructure as Code (IaC)**
+   - Define your infrastructure in YAML/JSON templates.
+   - Version control infrastructure with Git.
+
+2. **Multi-Environment Deployment**
+   - Create separate stacks for Dev, Test, and Production environments.
+
+3. **Automated Provisioning**
+   - Automatically create EC2, RDS, S3, IAM, Lambda, and other resources.
+
+4. **Compliance and Standardization**
+   - Enforce consistent configurations across teams and projects.
+
+5. **Disaster Recovery**
+   - Quickly redeploy infrastructure in a new region by reusing templates.
+
+6. **Complex Application Stacks**
+   - Deploy multi-tier web applications with databases, security groups, and load balancers.
+
+7. **Integration with CI/CD**
+   - Use CloudFormation in pipelines to deploy infrastructure automatically.

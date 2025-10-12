@@ -1,0 +1,12 @@
+# Introduction to AWS Route 53
+
+AWS Route 53 is a highly available and scalable Domain Name System (DNS) web service. It connects user requests to infrastructure running on AWS, such as EC2 instances, S3 buckets, or CloudFront distributions.
+
+Key Points:
+1. Provides domain registration, DNS routing, and health checking.
+2. Highly reliable, built using AWS’s global infrastructure.
+3. Fully managed service with automatic scaling.
+4. Supports routing based on latency, geolocation, weighted distribution, and more.
+5. Integrates with other AWS services seamlessly.
+6. Can monitor the health of applications and route traffic away from unhealthy endpoints.
+7. Enables high-availability and low-latency web applications globally.

@@ -1,0 +1,18 @@
+# Serving Your Website Globally with Low Latency
+
+Steps to serve a website globally using CloudFront:
+
+1. Upload your static website to an S3 bucket.
+2. Enable public access or configure bucket policy for CloudFront.
+3. Create a CloudFront distribution:
+   - Set your S3 bucket as the origin.
+   - Choose caching behavior and default TTL (Time to Live).
+   - Enable HTTPS for secure content delivery.
+4. CloudFront automatically replicates content across edge locations globally.
+5. Users access your website from the nearest edge location, reducing latency.
+6. Use Route 53 to point your custom domain to the CloudFront distribution.
+7. Monitor performance using CloudFront and CloudWatch metrics.
+
+Benefit:
+- Faster load times for global users.
+- High availability and reduced server load on origin.

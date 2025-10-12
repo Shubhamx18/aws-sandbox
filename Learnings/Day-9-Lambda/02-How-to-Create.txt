@@ -1,0 +1,22 @@
+# Creating an AWS Lambda Function
+
+Step-by-Step Guide:
+
+1. Open the AWS Management Console and go to the Lambda service.
+2. Click “Create function” and choose one of the following options:
+   - Author from scratch
+   - Use a blueprint
+   - Deploy a container image
+3. Provide a function name (e.g., MyLambdaFunction) and select the runtime (Python, Node.js, etc.).
+4. Configure permissions: 
+   - Create a new IAM role 
+   - Or use an existing role
+5. Click “Create function”.
+6. Add your code in the inline editor or upload a ZIP/container image.
+7. Configure function settings: memory allocation, timeout, and environment variables.
+8. Set triggers: S3, API Gateway, DynamoDB Streams, CloudWatch Events.
+9. Test the function by creating a test event with sample input.
+10. Review logs in CloudWatch for debugging.
+11. Enable versioning to manage multiple function versions.
+12. Use aliases to safely route traffic between versions.
+13. Save changes and deploy.

@@ -1,0 +1,7 @@
+Cost Optimization for RDS:
+
+1. Select correct instance size based on workload.
+2. Use Reserved Instances for long-term usage.
+3. Enable storage auto-scaling instead of over-provisioning.
+4. Use read replicas only when needed.
+5. Delete unused snapshots to save storage costs.

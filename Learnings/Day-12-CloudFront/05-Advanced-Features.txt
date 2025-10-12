@@ -1,0 +1,23 @@
+# Advanced Features of CloudFront
+
+1. **Lambda@Edge**
+   - Run code closer to users for dynamic content processing.
+
+2. **Geo-Restriction**
+   - Allow or block access based on user location.
+
+3. **Origin Failover**
+   - Automatically switch to backup origin if primary origin fails.
+
+4. **Custom Error Pages**
+   - Serve custom error messages for 404, 500 errors.
+
+5. **Content Invalidation**
+   - Remove cached objects before their TTL expires.
+
+6. **Logging and Monitoring**
+   - Access logs stored in S3.
+   - Monitor metrics in CloudWatch for cache hit ratio, latency, and requests.
+
+7. **Security**
+   - Integration with AWS WAF, Shield, and SSL/TLS certificates.

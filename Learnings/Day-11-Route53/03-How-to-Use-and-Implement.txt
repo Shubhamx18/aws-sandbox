@@ -1,0 +1,30 @@
+# How to Use and Implement AWS Route 53 - Step by Step
+
+1. **Register a Domain**
+   - Go to AWS Route 53 → Domains → Register Domain.
+   - Enter domain name and complete registration.
+
+2. **Create a Hosted Zone**
+   - Hosted Zone is a container for DNS records.
+   - Go to Route 53 → Hosted Zones → Create Hosted Zone.
+   - Enter domain name and select type (Public or Private).
+
+3. **Add DNS Records**
+   - Example: Point your domain to EC2 public IP or S3 bucket.
+   - Create record sets:
+     - Type A: IPv4 address.
+     - Type CNAME: Alias to another domain.
+     - Type MX: Mail server.
+     - Type TXT: Verification or SPF.
+
+4. **Set Routing Policies**
+   - Simple routing: One resource.
+   - Weighted routing: Split traffic between resources.
+   - Latency-based routing: Serve requests from lowest latency region.
+   - Failover routing: Route traffic away from unhealthy endpoints.
+
+5. **Test DNS Resolution**
+   - Use `nslookup` or `dig` to verify domain points to correct resource.
+
+6. **Integrate with AWS Resources**
+   - Point domain to CloudFront, ELB, or S3 static website.

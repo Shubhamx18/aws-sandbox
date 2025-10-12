@@ -1,0 +1,29 @@
+# Implementation and Practical Use of CloudFront
+
+Step-by-step example:
+
+1. **Prepare Content**
+   - Store your website files (HTML, CSS, JS) in an S3 bucket.
+
+2. **Create CloudFront Distribution**
+   - Go to AWS CloudFront → Create Distribution.
+   - Choose Web distribution.
+   - Set S3 bucket as origin.
+   - Configure caching and default behavior.
+   - Enable HTTPS for secure delivery.
+
+3. **Add Custom Domain**
+   - Use Route 53 to create an alias record pointing your domain to the CloudFront distribution.
+
+4. **Test**
+   - Open your domain in a browser.
+   - Content is delivered from the nearest edge location.
+
+5. **Advanced Options**
+   - Use Lambda@Edge for dynamic request processing.
+   - Configure Geo-restriction to allow/deny access from certain countries.
+   - Enable logging to track user requests and performance.
+
+Benefit:
+- Reduced latency for users worldwide.
+- Scalability without provisioning extra servers.

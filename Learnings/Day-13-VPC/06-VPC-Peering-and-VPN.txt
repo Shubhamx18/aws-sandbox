@@ -1,0 +1,16 @@
+# VPC Peering and VPN
+
+1. **VPC Peering**
+   - Connects two VPCs privately.
+   - Allows resources in one VPC to communicate with another.
+   - Useful for multi-account setups.
+
+2. **VPN Connection**
+   - Secure connection between on-premises network and AWS VPC.
+   - Uses IPsec tunnels.
+   - Allows hybrid cloud architectures.
+
+3. **Example**
+   - Peer VPC A (10.0.0.0/16) with VPC B (10.1.0.0/16).
+   - Configure route tables to allow cross-VPC traffic.
+   - Set up VPN for on-prem network access to VPC resources.

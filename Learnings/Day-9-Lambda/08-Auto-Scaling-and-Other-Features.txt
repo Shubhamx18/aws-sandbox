@@ -1,0 +1,17 @@
+# Auto-Scaling and Advanced Features of AWS Lambda
+
+1. Automatic Scaling: Lambda scales horizontally with incoming events.
+2. Concurrency: Handles thousands of simultaneous requests automatically.
+3. Reserved Concurrency: Guarantees a minimum number of executions.
+4. Provisioned Concurrency: Avoids cold starts for critical workloads.
+5. CloudWatch Integration: Logs, metrics, and alarms for monitoring.
+6. X-Ray Integration: Tracing for debugging and performance insights.
+7. Layers: Share libraries and dependencies across multiple functions.
+8. Versioning: Maintain multiple versions for safe deployments.
+9. Aliases: Route traffic between versions for controlled updates.
+10. Environment Variables: Configure functions without changing code.
+11. Lambda@Edge: Run functions closer to end-users via CloudFront.
+12. Security: IAM roles and policies control access to resources.
+13. Logging: Automatic logging of invocation details.
+14. Integration: Can trigger or invoke other Lambda functions or AWS services.
+15. Best Practices: Monitor, secure, optimize cost and performance.

@@ -1,0 +1,12 @@
+# Introduction to Amazon CloudFront
+
+Amazon CloudFront is a Content Delivery Network (CDN) that delivers data, videos, applications, and APIs to customers globally with low latency and high transfer speeds.
+
+Key Points:
+1. Fully managed CDN by AWS.
+2. Caches content at edge locations worldwide.
+3. Reduces latency and improves user experience.
+4. Works with AWS services like S3, EC2, Lambda@Edge, and API Gateway.
+5. Supports both static and dynamic content.
+6. Offers integrated security via AWS Shield and SSL/TLS encryption.
+7. Can track usage and performance through Amazon CloudWatch metrics.

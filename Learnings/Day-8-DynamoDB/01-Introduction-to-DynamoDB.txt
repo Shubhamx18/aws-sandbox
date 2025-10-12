@@ -1,0 +1,16 @@
+Amazon DynamoDB is a fully managed NoSQL database service provided by AWS.
+
+Key Points:
+1. NoSQL Database: Key-value and document data model.
+2. Fully Managed: Handles provisioning, scaling, and replication.
+3. High Performance: Single-digit millisecond latency.
+4. Serverless: No need to manage servers.
+5. Auto Scaling: Automatically adjusts read/write capacity.
+6. Security: IAM-based access, encryption at rest and in transit.
+7. Integration: Works well with Lambda, S3, API Gateway.
+
+Use Cases:
+- Real-time analytics
+- IoT applications
+- Mobile apps backend
+- Session management and caching

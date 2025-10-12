@@ -1,0 +1,79 @@
+# Deploying a Website on AWS Lambda
+
+AWS Lambda itself cannot host traditional websites, but it can serve dynamic backend logic. Here’s how you can implement it step by step:
+
+1. **Use Lambda with API Gateway**
+   - Lambda cannot directly handle HTTP requests.
+   - API Gateway listens to HTTP requests and triggers your Lambda function.
+   - Example:
+     - Create an HTTP API in API Gateway.
+     - Add route `/submit-form` and link it to a Lambda function.
+
+2. **Host static website on S3 or CloudFront**
+   - S3 hosts static files: HTML, CSS, JS.
+   - CloudFront distributes content globally for faster access.
+   - Example:
+     - Create S3 bucket `my-website-bucket`.
+     - Upload `index.html`, `style.css`, `app.js`.
+     - Enable static website hosting.
+     - Optional: Use CloudFront for CDN.
+
+3. **Use Lambda to process backend logic**
+   - Handles form submissions, authentication, or API calls.
+   - Example (Python Lambda):
+     ```
+     import json
+     def lambda_handler(event, context):
+         name = event['queryStringParameters']['name']
+         return {
+             'statusCode': 200,
+             'body': json.dumps(f"Hello, {name}!")
+         }
+     ```
+
+4. **Connect Lambda to DynamoDB or RDS**
+   - Lambda can store/retrieve data from AWS databases.
+   - Example with DynamoDB:
+     ```
+     import boto3
+     dynamodb = boto3.resource('dynamodb')
+     table = dynamodb.Table('UserSubmissions')
+     def lambda_handler(event, context):
+         user_name = event['queryStringParameters']['name']
+         table.put_item(Item={'user_id': user_name})
+         return {'statusCode': 200, 'body': 'Data Saved'}
+     ```
+
+5. **Set up triggers via API Gateway routes**
+   - Each HTTP route triggers Lambda automatically.
+   - Example:
+     - Route `/submit-form` → Lambda `FormHandler`
+     - Route `/get-user` → Lambda `GetUserData`
+
+6. **Test your Lambda endpoints**
+   - Use Postman or curl to verify functionality.
+   - Example:
+     ```
+     curl https://<api-gateway-endpoint>/submit-form?name=Shubham
+     ```
+
+7. **Enable CORS in API Gateway**
+   - Allows website hosted on S3/CloudFront to call Lambda APIs.
+   - Configure CORS in API Gateway route settings.
+
+8. **Monitor requests and logs in CloudWatch**
+   - Logs and metrics help debug and track Lambda performance.
+
+9. **Use CloudFront to cache static content**
+   - Improves website performance globally by reducing latency.
+
+10. **Lambda scales automatically**
+    - Handles multiple requests without manual server management.
+    - Example: 1000 simultaneous form submissions are handled automatically.
+
+**Summary:**
+- S3 hosts static content, CloudFront delivers it globally.
+- API Gateway exposes HTTP routes to Lambda.
+- Lambda processes requests and connects to databases.
+- CloudWatch monitors performance, CORS enables cross-origin requests.
+- Auto-scaling ensures backend handles traffic spikes efficiently.

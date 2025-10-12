@@ -1,0 +1,11 @@
+S3 Storage Classes control cost and access frequency.
+
+1. STANDARD - frequently accessed, high durability.
+2. STANDARD_IA - infrequent access, lower cost.
+3. ONEZONE_IA - cheaper, stored in a single AZ.
+4. INTELLIGENT_TIERING - auto-moves to lower-cost tier.
+5. GLACIER - archival, slow retrieval.
+6. DEEP_ARCHIVE - long-term archival, lowest cost.
+
+AWS CLI Example:
+aws s3 cp file.txt s3://my-bucket-name/ --storage-class STANDARD_IA

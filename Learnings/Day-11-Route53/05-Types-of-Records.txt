@@ -1,0 +1,25 @@
+# Types of DNS Records in Route 53
+
+1. **A Record**
+   - Maps a domain name to an IPv4 address.
+
+2. **AAAA Record**
+   - Maps a domain name to an IPv6 address.
+
+3. **CNAME Record**
+   - Maps a domain name to another domain name.
+
+4. **MX Record**
+   - Directs email to mail servers.
+
+5. **TXT Record**
+   - Store text data, often for verification or SPF/DKIM.
+
+6. **NS Record**
+   - Delegates a domain or subdomain to another DNS server.
+
+7. **Alias Record**
+   - AWS-specific, maps domain to AWS resources like S3 or ELB without extra cost.
+
+8. **SRV Record**
+   - Service record, used for service discovery in networks.

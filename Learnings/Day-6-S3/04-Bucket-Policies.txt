@@ -1,0 +1,24 @@
+Bucket Policies control access to your bucket and its objects.
+
+Key Points:
+- Written in JSON format.
+- Can allow or deny access to users, groups, roles, or public.
+- Can restrict by IP, actions, or object prefix.
+
+Example: Public Read Access
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::my-bucket-name/*"
+    }
+  ]
+}
+
+Steps to apply:
+1. Open S3 Console -> Select Bucket -> Permissions -> Bucket Policy.
+2. Paste policy JSON.
+3. Save changes.

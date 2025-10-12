@@ -1,0 +1,8 @@
+Common Use Cases of Amazon RDS:
+
+1. Web Applications: Backend for websites, e-commerce, SaaS.
+2. Enterprise Applications: ERP, CRM, HR systems.
+3. Analytics 
+4. Disaster Recovery: Multi-AZ for continuity.
+5. Development 
+6. Cross-region Replication: Global applications.

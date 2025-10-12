@@ -1,0 +1,15 @@
+# What is DNS and How It Works
+
+DNS (Domain Name System) translates human-readable domain names (like www.example.com) into IP addresses (like 192.0.2.1) that computers use to communicate.
+
+How DNS Works:
+1. A user types a domain name in the browser.
+2. The request goes to a DNS resolver (usually from ISP).
+3. Resolver queries authoritative DNS servers.
+4. Route 53 responds with the correct IP address of the resource.
+5. Browser connects to the IP and loads the website.
+
+Key Points:
+- DNS ensures users can access websites without memorizing IP addresses.
+- Route 53 can manage DNS routing globally with high availability.
+- Supports public DNS (Internet-facing) and private DNS (inside VPC).

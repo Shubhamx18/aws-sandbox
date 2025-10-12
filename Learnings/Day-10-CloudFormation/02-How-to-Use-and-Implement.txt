@@ -1,0 +1,40 @@
+# How to Use AWS CloudFormation - Step by Step
+
+Steps to create a CloudFormation stack:
+
+1. **Create a Template**
+   - Define AWS resources using YAML or JSON.
+   - Example: Create an EC2 instance and an S3 bucket.
+
+Resources:
+MyEC2Instance:
+Type: AWS::EC2::Instance
+Properties:
+InstanceType: t2.micro
+ImageId: ami-0abcdef1234567890
+MyS3Bucket:
+Type: AWS::S3::Bucket
+Properties:
+BucketName: my-sample-bucket
+
+
+2. **Upload Template to CloudFormation**
+- Go to AWS Console → CloudFormation → Create Stack → Upload Template File.
+- Choose "Next".
+
+3. **Configure Stack Options**
+- Provide stack name, tags, and permissions (IAM role if needed).
+
+4. **Deploy Stack**
+- Click "Create stack".
+- CloudFormation provisions all resources defined in template automatically.
+
+5. **Verify Resources**
+- Check EC2 and S3 in the console to ensure they are created.
+
+6. **Update Stack**
+- Modify template for new changes.
+- Update stack to apply new configuration without destroying existing resources.
+
+7. **Delete Stack**
+- Stack deletion removes all resources created by that stack automatically.

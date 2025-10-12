@@ -1,0 +1,14 @@
+# How AWS Lambda Works
+
+1. AWS provisions a lightweight container to execute your function.
+2. Lambda loads your code and runs it in response to an event.
+3. Each invocation is stateless and isolated.
+4. You can configure memory, execution timeout, and environment variables.
+5. Lambda integrates with AWS services via triggers (S3, DynamoDB, API Gateway, CloudWatch).
+6. Execution logs and metrics are automatically sent to CloudWatch.
+7. Lambda automatically scales horizontally based on the number of events.
+8. Cold starts may occur when a new container is initialized.
+9. Provisioned concurrency can prevent cold starts for critical workloads.
+10. Lambda functions can call other Lambda functions or AWS services.
+11. Layers allow sharing of libraries and dependencies across functions.
+12. Versioning and aliases help in safe deployments and traffic routing.

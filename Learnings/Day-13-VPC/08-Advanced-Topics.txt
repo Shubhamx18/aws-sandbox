@@ -1,0 +1,17 @@
+# Advanced VPC Topics
+
+1. **Flow Logs**
+   - Capture network traffic information for monitoring and analysis.
+
+2. **VPC Endpoints**
+   - Private access to AWS services like S3, DynamoDB without public internet.
+
+3. **Elastic Load Balancing**
+   - Deploy ELB in public subnet to route traffic to private EC2 instances.
+
+4. **PrivateLink**
+   - Access services securely without traversing internet.
+
+5. **IPv6 in VPC**
+   - Assign IPv6 CIDR blocks for global addressing.
+   - Mix with IPv4 CIDR for dual-stack networks.

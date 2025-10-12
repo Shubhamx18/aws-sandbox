@@ -1,0 +1,15 @@
+AWS Snow Family: For large-scale offline data transfer.
+
+1. Snowball - Petabyte-scale data transfer.
+2. Snowball Edge - Compute + Storage.
+3. Snowmobile - Exabyte-scale transfer via truck.
+
+Use Cases:
+- Migrate large datasets to AWS.
+- Backup and disaster recovery.
+- Edge computing with Snowball Edge.
+
+Steps:
+- Order Snowball via AWS Console.
+- Transfer data using client software.
+- Ship device back to AWS for ingestion.

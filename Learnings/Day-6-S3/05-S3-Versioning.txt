@@ -1,0 +1,17 @@
+S3 Versioning allows multiple versions of an object to coexist.
+
+Benefits:
+- Protect against accidental deletion or overwrites.
+- Restore previous versions when needed.
+
+Steps to Enable Versioning:
+1. Go to S3 Console -> Bucket -> Properties -> Versioning.
+2. Enable Versioning.
+
+AWS CLI:
+aws s3api put-bucket-versioning --bucket my-bucket-name --versioning-configuration Status=Enabled
+
+How it works:
+- Each object update creates a new version.
+- Deleted objects become "Delete Markers".
+- You can retrieve previous versions using the version ID.

@@ -1,0 +1,11 @@
+# Use Cases of AWS Route 53
+
+1. Domain Registration for web applications.
+2. Hosting static websites on S3 with custom domains.
+3. Routing traffic to multiple AWS regions for high availability.
+4. Low-latency global content delivery with CloudFront.
+5. Disaster recovery by routing traffic away from failed endpoints.
+6. Managing email servers with MX records.
+7. Implementing automated failover routing.
+8. Supporting microservices and API endpoints globally.
+9. Internal DNS for private VPC resources.

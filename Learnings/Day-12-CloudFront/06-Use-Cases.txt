@@ -1,0 +1,10 @@
+# Use Cases for Amazon CloudFront
+
+1. Accelerating static websites stored in S3.
+2. Streaming videos or live broadcasts globally.
+3. Hosting APIs with low-latency response.
+4. Delivering software downloads or large files efficiently.
+5. Reducing load on origin servers by caching content at edges.
+6. Providing secure content delivery with HTTPS, WAF, and geo-restrictions.
+7. Real-time dynamic content personalization using Lambda@Edge.
+8. Disaster recovery by serving cached content even if origin fails.

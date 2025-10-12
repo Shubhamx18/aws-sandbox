@@ -1,0 +1,15 @@
+# Global Website Deployment and Low-Latency Routing
+
+AWS Route 53 supports global applications by directing users to the nearest AWS region.
+
+Steps:
+1. Create multiple instances of your application in different regions.
+2. Use Route 53 latency-based routing to direct traffic to the region with lowest latency.
+3. Enable health checks to route traffic away from unhealthy endpoints.
+4. Combine with CloudFront CDN to reduce latency for static content.
+5. Monitor metrics via CloudWatch to ensure performance.
+
+Benefits:
+- Users experience faster website loading.
+- High availability even if one region fails.
+- Optimized for global user base.

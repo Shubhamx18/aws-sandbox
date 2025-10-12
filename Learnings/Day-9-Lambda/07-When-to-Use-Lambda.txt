@@ -1,0 +1,17 @@
+# When to Use AWS Lambda
+
+1. Event-driven workloads (S3 uploads, DynamoDB streams, scheduled tasks).
+2. Backend APIs with API Gateway.
+3. Real-time data processing and ETL tasks.
+4. Microservices architecture.
+5. Serverless automation and triggers.
+6. Lightweight backend services.
+7. IoT event processing.
+8. Low-cost, infrequently used workloads.
+9. Integration with Step Functions for orchestration.
+10. Chatbots and notification systems.
+11. Real-time analytics and monitoring.
+12. Auto-scaling backend without server management.
+13. Stateless functions that execute quickly.
+14. Use with S3, DynamoDB, and RDS for data-driven workflows.
+15. Prototyping and MVP applications.

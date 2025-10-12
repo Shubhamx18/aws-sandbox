@@ -1,0 +1,16 @@
+AWS Lambda Introduction:
+1. AWS Lambda is a serverless compute service.
+2. Allows you to run code without provisioning or managing servers.
+3. Automatically scales applications by running code in response to events.
+4. Supports multiple programming languages: Python, Node.js, Java, Go, Ruby, .NET.
+5. Event sources include S3, DynamoDB, Kinesis, API Gateway, CloudWatch, and more.
+6. You are charged only for compute time used.
+7. Ideal for building microservices and backend APIs.
+8. Enables event-driven architecture for real-time processing.
+9. Functions are stateless; maintain no data between executions.
+10. Integrates seamlessly with other AWS services.
+11. Lambda execution environment runs in isolated containers.
+12. Cold start may occur when a function is invoked after a period of inactivity.
+13. Supports Layers to share common code or libraries.
+14. Provides automatic logging to CloudWatch.
+15. Supports versioning and aliases for safe deployments.

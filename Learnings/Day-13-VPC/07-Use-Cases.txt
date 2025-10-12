@@ -1,0 +1,8 @@
+# Use Cases of Amazon VPC
+
+1. Host web applications with public and private subnets.
+2. Deploy multi-tier applications with DB in private subnet.
+3. Establish secure hybrid cloud using VPN/Direct Connect.
+4. Isolate sensitive workloads from public network.
+5. Connect multiple accounts using VPC peering.
+6. Implement disaster recovery and multi-region architectures.

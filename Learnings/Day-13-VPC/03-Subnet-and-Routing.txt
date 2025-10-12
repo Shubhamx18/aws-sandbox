@@ -1,0 +1,16 @@
+# Subnet and Routing
+
+1. **Subnets**
+   - Divide VPC IP range into smaller networks.
+   - Assign resources to public or private subnets based on use case.
+
+2. **Route Tables**
+   - Define where network traffic is directed.
+   - Public route table: Routes traffic to IGW.
+   - Private route table: Routes traffic to NAT gateway for internet access.
+
+3. **Implementation Example**
+   - Create a VPC with CIDR 10.0.0.0/16.
+   - Create a public subnet 10.0.1.0/24.
+   - Create a private subnet 10.0.2.0/24.
+   - Attach route tables appropriately.

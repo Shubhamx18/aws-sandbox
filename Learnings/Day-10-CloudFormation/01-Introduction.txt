@@ -1,0 +1,13 @@
+# Introduction to AWS CloudFormation
+
+AWS CloudFormation is a service that allows you to define and provision infrastructure as code (IaC) in a safe and repeatable manner.
+
+Key Points:
+1. CloudFormation uses templates (YAML or JSON) to define AWS resources.
+2. Enables automated provisioning of multiple AWS services.
+3. Provides consistent environments for development, testing, and production.
+4. Supports rollback in case of errors during stack creation.
+5. Helps in version-controlling your infrastructure along with application code.
+6. Reduces manual configuration errors and simplifies infrastructure management.
+7. Ideal for repeatable deployments and complex multi-resource environments.
+8. Templates can be shared across teams to enforce best practices.

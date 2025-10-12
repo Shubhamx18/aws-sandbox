@@ -1,0 +1,15 @@
+# Internet Gateway and NAT Gateway
+
+1. **Internet Gateway (IGW)**
+   - Connects your VPC to the internet.
+   - Attach to VPC and modify route table for public subnet.
+
+2. **NAT Gateway**
+   - Allows private subnet instances to access the internet.
+   - Public subnet hosts NAT gateway with Elastic IP.
+   - Private subnet routes traffic through NAT gateway.
+
+3. **Example**
+   - Launch EC2 in private subnet.
+   - Configure NAT gateway in public subnet.
+   - EC2 can download updates without being public.

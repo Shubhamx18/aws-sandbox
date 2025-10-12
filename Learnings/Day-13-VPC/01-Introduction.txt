@@ -1,0 +1,10 @@
+# Introduction to Amazon VPC
+
+Amazon Virtual Private Cloud (VPC) lets you provision a logically isolated section of the AWS Cloud. You can launch AWS resources like EC2, RDS, and Lambda in a virtual network you define.
+
+Key Points:
+1. Full control over network configuration: IP range, subnets, route tables, gateways.
+2. Isolated environment for security and compliance.
+3. Supports both public-facing and private resources.
+4. Integrates with other AWS services like EC2, RDS, Lambda, and CloudFront.
+5. Enables advanced networking configurations such as peering and VPN connections.

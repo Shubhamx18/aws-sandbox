@@ -1,0 +1,14 @@
+# AWS Lambda - Introduction
+
+AWS Lambda is a serverless compute service that allows you to run code without provisioning or managing servers. 
+It automatically handles scaling, availability, and infrastructure management. 
+
+Key Points:
+- Event-driven: Executes code in response to triggers such as S3 uploads, DynamoDB updates, or API Gateway requests.
+- Supported Languages: Python, Node.js, Java, C#, Go, Ruby, and more.
+- No server management: Focus solely on your application logic.
+- Cost-effective: Pay only for the compute time consumed.
+- Stateless execution: Each invocation runs independently.
+- Environment Variables: Store configuration without modifying the code.
+- Integration: Works seamlessly with other AWS services like S3, DynamoDB, RDS, API Gateway, and Step Functions.
+- Use Cases: Backend microservices, real-time data processing, ETL jobs, chatbots, automation scripts.

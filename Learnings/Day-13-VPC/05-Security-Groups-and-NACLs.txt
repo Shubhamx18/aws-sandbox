@@ -1,0 +1,16 @@
+# Security Groups and Network ACLs
+
+1. **Security Groups**
+   - Stateful firewall for EC2 instances.
+   - Define allowed inbound/outbound traffic.
+   - Automatically allows response traffic.
+
+2. **Network ACLs (NACLs)**
+   - Stateless firewall at subnet level.
+   - Explicit allow/deny rules.
+   - Useful for additional layer of security.
+
+3. **Best Practices**
+   - Use security groups for instance-level control.
+   - Use NACLs for subnet-level restrictions.
+   - Combine for layered security.

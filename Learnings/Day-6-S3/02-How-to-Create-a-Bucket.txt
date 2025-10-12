@@ -1,0 +1,17 @@
+Creating an S3 bucket allows you to start storing objects.
+
+Steps via AWS Console:
+1. Sign in to AWS Management Console.
+2. Navigate to Services -> S3 -> Create Bucket.
+3. Enter a globally unique bucket name.
+4. Choose a region close to your users.
+5. Configure options (Versioning, Tags, Encryption, Logging).
+6. Set permissions (public/private access).
+7. Click "Create Bucket".
+
+Steps via AWS CLI:
+1. Open terminal or CMD.
+2. Run:
+   aws s3 mb s3://my-bucket-name --region us-east-1
+3. Verify creation:
+   aws s3 ls

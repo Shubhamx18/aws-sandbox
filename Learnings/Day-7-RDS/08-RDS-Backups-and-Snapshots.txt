@@ -1,0 +1,12 @@
+RDS Backups and Snapshots:
+
+1. Automated Backups:
+   - Daily snapshots and transaction logs.
+   - Enables point-in-time recovery.
+
+2. Manual Snapshots:
+   - User-initiated snapshots retained until deletion.
+
+Best Practices:
+- Enable Multi-AZ.
+- Monitor storage usage.

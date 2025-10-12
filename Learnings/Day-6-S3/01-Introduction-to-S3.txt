@@ -1,0 +1,17 @@
+Amazon S3 (Simple Storage Service) is an object storage service provided by AWS.
+
+Key Points:
+- Stores files as objects (data + metadata + unique ID).
+- Unlimited storage, highly durable (99.999999999%).
+- Ideal for backups, static website hosting, media storage, big data, and analytics.
+- Key Features:
+  - Versioning
+  - Replication
+  - Lifecycle management
+  - Storage classes
+  - Encryption options
+
+How it works:
+- Each file is stored as an object inside a bucket.
+- Buckets are globally unique and reside in a specific AWS region.
+- Objects can be accessed via URLs, AWS SDKs, or CLI commands.

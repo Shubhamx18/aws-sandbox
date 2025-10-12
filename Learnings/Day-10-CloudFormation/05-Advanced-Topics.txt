@@ -1,0 +1,34 @@
+# Advanced Topics in AWS CloudFormation
+
+1. **Nested Stacks**
+   - Break complex templates into smaller reusable templates.
+   - Manage multiple resources efficiently.
+
+2. **Parameters**
+   - Pass input values to your stack at creation time.
+   - Example: Instance type, bucket name.
+
+3. **Mappings**
+   - Define conditional values for different regions or environments.
+   - Example: Map AMI IDs based on region.
+
+4. **Outputs**
+   - Export resource details like EC2 public IP or S3 bucket name.
+   - Can be imported by other stacks.
+
+5. **Stack Policies**
+   - Protect critical resources from accidental updates.
+
+6. **Change Sets**
+   - Preview the impact of changes before updating the stack.
+
+7. **Integration with Other Services**
+   - Combine with Lambda, S3, EC2, RDS, and IAM to automate workflows.
+
+8. **Drift Detection**
+   - Detect manual changes in resources that deviate from your template.
+
+**Best Practices:**
+- Use version control for templates.
+- Test templates in development environment.
+- Modularize templates using nested stacks.

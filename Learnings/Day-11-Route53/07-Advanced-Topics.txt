@@ -1,0 +1,22 @@
+# Advanced Topics in AWS Route 53
+
+1. **Health Checks**
+   - Monitor endpoints and automatically route traffic away from unhealthy resources.
+
+2. **Weighted Routing**
+   - Distribute traffic across multiple resources based on weights.
+
+3. **Geolocation Routing**
+   - Serve users from a region closest to their location.
+
+4. **Failover Routing**
+   - Automatically switch traffic to standby resources during failure.
+
+5. **DNSSEC (Domain Name System Security Extensions)**
+   - Adds integrity and authenticity to DNS data.
+
+6. **Integration with CloudFront & ELB**
+   - Alias records simplify pointing your domain to AWS services.
+
+7. **Private Hosted Zones**
+   - Manage internal DNS for resources within VPCs.
