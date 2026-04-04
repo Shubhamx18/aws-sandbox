@@ -179,7 +179,6 @@ aws-sandbox/
 <summary><b>🚀 CloudFront</b></summary>
 
 - CDN distributions and origin setup
-- Edge locations and caching behavior
 - HTTPS with ACM certificates
 
 </details>
