@@ -12,13 +12,13 @@
 
 ---
 
-## 📌 About This Repository
+##  About This Repository
 
 This repository documents my personal hands-on practice with AWS. It is organized into two main sections — **topic slide references** and **daily learning notes** — covering everything from cloud fundamentals to advanced services like CloudFormation, Lambda, and VPC.
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 aws-sandbox/
@@ -84,7 +84,7 @@ aws-sandbox/
 ## 🛠️ AWS Services Covered
 
 <details>
-<summary><b>🔐 IAM — Identity and Access Management</b></summary>
+<summary><b> IAM — Identity and Access Management</b></summary>
 
 - Creating users, groups, and roles
 - Attaching managed and inline policies
@@ -94,7 +94,7 @@ aws-sandbox/
 </details>
 
 <details>
-<summary><b>🖥️ EC2 — Elastic Compute Cloud</b></summary>
+<summary><b> EC2 — Elastic Compute Cloud</b></summary>
 
 - Launching and connecting to instances via SSH
 - Security groups and key pairs
@@ -113,7 +113,7 @@ aws-sandbox/
 </details>
 
 <details>
-<summary><b>⚖️ ELB & ASG — Load Balancer & Auto Scaling</b></summary>
+<summary><b> ELB & ASG — Load Balancer & Auto Scaling</b></summary>
 
 - Application, Network, and Gateway Load Balancers
 - Target groups and health checks
@@ -122,7 +122,7 @@ aws-sandbox/
 </details>
 
 <details>
-<summary><b>🪣 S3 — Simple Storage Service</b></summary>
+<summary><b> S3 — Simple Storage Service</b></summary>
 
 - Buckets, objects, prefixes
 - Bucket policies, ACLs, versioning
@@ -140,7 +140,7 @@ aws-sandbox/
 </details>
 
 <details>
-<summary><b>📦 DynamoDB</b></summary>
+<summary><b> DynamoDB</b></summary>
 
 - NoSQL tables, partition keys, sort keys
 - On-demand vs provisioned capacity
@@ -158,7 +158,7 @@ aws-sandbox/
 </details>
 
 <details>
-<summary><b>🏗️ CloudFormation</b></summary>
+<summary><b> CloudFormation</b></summary>
 
 - Writing CloudFormation templates (YAML/JSON)
 - Creating and managing stacks
@@ -167,7 +167,7 @@ aws-sandbox/
 </details>
 
 <details>
-<summary><b>🌐 Route 53</b></summary>
+<summary><b> Route 53</b></summary>
 
 - Hosted zones and DNS records
 - Routing policies (simple, weighted, latency, failover)
@@ -176,7 +176,7 @@ aws-sandbox/
 </details>
 
 <details>
-<summary><b>🚀 CloudFront</b></summary>
+<summary><b> CloudFront</b></summary>
 
 - CDN distributions and origin setup
 - HTTPS with ACM certificates
@@ -194,7 +194,7 @@ aws-sandbox/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -219,24 +219,24 @@ aws configure
 # Default output format: json
 ```
 
-> 💡 Verify setup: `aws sts get-caller-identity`
+>  Verify setup: `aws sts get-caller-identity`
 
 ---
 
-## 📚 Resources
+##  Resources
 
 | Resource | Link |
 |----------|------|
-| 📖 AWS Docs | [docs.aws.amazon.com](https://docs.aws.amazon.com/) |
-| 💻 AWS CLI Reference | [CLI v2 Docs](https://awscli.amazonaws.com/v2/documentation/api/latest/index.html) |
-| 🆓 AWS Free Tier | [aws.amazon.com/free](https://aws.amazon.com/free/) |
-| 🎓 AWS Skill Builder | [skillbuilder.aws](https://skillbuilder.aws/) |
+|  AWS Docs | [docs.aws.amazon.com](https://docs.aws.amazon.com/) |
+|  AWS CLI Reference | [CLI v2 Docs](https://awscli.amazonaws.com/v2/documentation/api/latest/index.html) |
+|  AWS Free Tier | [aws.amazon.com/free](https://aws.amazon.com/free/) |
+|  AWS Skill Builder | [skillbuilder.aws](https://skillbuilder.aws/) |
 
 ---
 
-## 🔒 Security Reminder
+##  Security Reminder
 
-> ⚠️ **Never commit AWS credentials, `.pem` files, or secret keys to this repository.**
+>  **Never commit AWS credentials, `.pem` files, or secret keys to this repository.**
 
 ```bash
 # Add to .gitignore
@@ -247,13 +247,13 @@ echo "credentials" >> .gitignore
 
 ---
 
-## 👤 Author
+##  Author
 
 <div align="center">
 
 **Shubham**
 [![GitHub](https://img.shields.io/badge/GitHub-Shubhamx18-181717?style=for-the-badge&logo=github)](https://github.com/Shubhamx18)
 
-⭐ **Star this repo if it helped you!** ⭐
+ **Star this repo if it helped you!** 
 
 </div>
