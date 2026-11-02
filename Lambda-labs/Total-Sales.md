@@ -238,4 +238,3 @@ Go to **Lambda > Monitor > CloudWatch Logs**, open the latest log, and read the 
 
 ---
 
-**Next:** [Exercise: Student Marks](03-student-marks.md)
